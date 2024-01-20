@@ -58,7 +58,7 @@ def divisors(numbers):
         print('Invalid input')
 
     mod_3 = input(
-        "What is the remainder when your number is divided by 3? (You should input an integer)")
+        "What is the remainder when your number is divided by 3? (0/1/2)")
     if int(mod_3) == 0:
         numbers = list(set(numbers).intersection(mod_3_is_0))
     elif int(mod_3) == 1:
@@ -67,8 +67,8 @@ def divisors(numbers):
         numbers = list(set(numbers).intersection(mod_3_is_2))
     else:
         print("Sorry it needs to be an integer from [0, 1, 2]")
-
-    return numbers
+    guess = f'Your number is {numbers[0]}!'
+    return guess
 
 
 print(divisors(sectioning()))
